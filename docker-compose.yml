@@ -1,0 +1,9 @@
+services:
+  app:
+    image: golang:1.23
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8087"
+    command: go run receipt-processor.go
